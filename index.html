@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termo de Uso e Responsabilidade – Musae Bot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="serverWarning" class="server-warning" style="display: none;">
+        ⚠️ Para salvar os termos, execute <strong>npm start</strong> e acesse <a href="http://localhost:3000">http://localhost:3000</a>
+    </div>
+    <div class="container">
+        <header class="header">
+            <h1>Termo de Uso e Responsabilidade</h1>
+            <p class="subtitle">Musae Bot – Leia atentamente antes de aceitar</p>
+        </header>
+
+        <main class="main-content">
+            <div class="terms-box" id="termsContent">
+                <p>O Musae Bot é um software desenvolvido por Isac Buzelli dos Santos, destinado à leitura de mensagens de chat de servidores Minecraft e ao envio automatizado dessas mensagens para um canal privado no Discord, definido pelo contratante.</p>
+
+                <p>O software captura mensagens de chat, usernames/nicks e horários (timestamps), encaminhando essas informações ao servidor Discord indicado pelo contratante, em um canal privado de moderação.</p>
+
+                <p>O contratante declara estar ciente de que o bot monitora o chat e encaminha as mensagens para o ambiente privado de administração.</p>
+
+                <p>Nos termos da LGPD (Lei nº 13.709/2018), o contratante é o único CONTROLADOR dos dados tratados pelo Musae Bot, sendo responsável por: ter base legal para o monitoramento; informar os jogadores de forma clara sobre o monitoramento; garantir os direitos dos titulares de dados; cumprir as obrigações legais; gerenciar as permissões do canal privado no Discord; assumir total responsabilidade pelo envio das informações.</p>
+
+                <p>Durante a instalação, o desenvolvedor pode ter acesso técnico temporário ao ambiente onde o bot estiver hospedado, apenas para implementação e testes. Esse acesso é limitado e não envolve retenção ou armazenamento externo de dados.</p>
+
+                <p>Após a entrega, o desenvolvedor pode continuar como programador do servidor (Musae Eras SMP), na criação e manutenção de mods. Essa atuação não envolve acesso ao canal privado de logs nem aos dados processados pelo bot.</p>
+
+                <p>O desenvolvedor não participa do monitoramento, não trata dados continuamente, não tem permissão administrativa sobre o canal de logs e não mantém credenciais de envio. A gestão de acessos e dados permanece sob responsabilidade do contratante.</p>
+
+                <p>O desenvolvedor não se responsabiliza por uso indevido das informações, vazamentos da infraestrutura do contratante, configurações incorretas do Discord, falhas de segurança ou descumprimento da legislação.</p>
+
+                <p>Em caso de descumprimento pelo contratante (uso ilícito, dados sem base legal, ausência de informação aos usuários), o desenvolvedor pode suspender o suporte, revogar a licença e encerrar o vínculo com o Musae Bot.</p>
+
+                <p>O descumprimento pode gerar responsabilização civil exclusiva do contratante por danos, prejuízos ou sanções, ficando o desenvolvedor isento de responsabilidade solidária ou subsidiária.</p>
+
+                <p>O software é fornecido como está, sem garantia de funcionamento ininterrupto ou ausência de falhas técnicas.</p>
+
+                <p>Ao contratar, instalar ou utilizar o Musae Bot, o contratante declara que leu, compreendeu e aceita integralmente os termos acima, assumindo total responsabilidade pelo tratamento dos dados.</p>
+            </div>
+
+            <form class="signature-form" id="signatureForm">
+                <div class="form-group">
+                    <label for="userName">Nome completo do assinante *</label>
+                    <input type="text" id="userName" name="userName" required placeholder="Digite seu nome completo">
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+                        <span class="checkmark"></span>
+                        Declaro que li, compreendi e aceito integralmente o Termo de Uso e Responsabilidade do Musae Bot acima descrito.
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="signatureDate">Data da assinatura</label>
+                    <input type="date" id="signatureDate" name="signatureDate" required>
+                </div>
+
+                <div class="form-group signature-pad-group">
+                    <label>Assinatura (desenhe com o mouse ou dedo)</label>
+                    <div class="signature-pad-wrapper">
+                        <canvas id="signaturePad" width="400" height="150"></canvas>
+                        <button type="button" class="btn-clear-signature" id="clearSignature">Limpar</button>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary" id="submitBtn">
+                        <span class="btn-text">Enviar e Salvar</span>
+                        <span class="btn-icon">✓</span>
+                    </button>
+                </div>
+            </form>
+
+            <div class="success-panel" id="successPanel">
+                <div class="success-icon">✓</div>
+                <h3>Termo Musae Bot assinado com sucesso!</h3>
+                <p>O documento foi salvo. O administrador terá acesso ao PDF.</p>
+                <div class="signature-info" id="signatureInfo"></div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Documento gerado eletronicamente com validade jurídica</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

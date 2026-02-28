@@ -1,0 +1,12 @@
+{
+  "name": "meu-site",
+  "version": "1.0.0",
+  "description": "Site de termo de uso Musae Bot com salvamento de PDFs",
+  "main": "server.js",
+  "engines": { "node": ">=18.0.0" },
+  "scripts": { "start": "node server.js" },
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.3"
+  }
+}
